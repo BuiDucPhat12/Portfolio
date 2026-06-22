@@ -41,7 +41,20 @@ export default function About() {
             </div>
             <ul className="mt-3 space-y-2">
               {certifications.map((c) => (
-                <li key={c} className="text-sm leading-relaxed text-soft">{c}</li>
+                <li key={c.label} className="text-sm leading-relaxed text-soft">
+                  {c.label}
+                  {c.items && (
+                    <ul className="mt-1.5 space-y-1 border-l border-line pl-3">
+                      {c.items.map((it) => (
+                        <li key={it.label} className="text-xs text-muted">
+                          <a href={it.href} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-cyan">
+                            {it.label} ↗
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
               ))}
             </ul>
           </div>

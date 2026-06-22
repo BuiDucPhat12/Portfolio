@@ -96,7 +96,7 @@ export default function Hero() {
           <div className="relative rounded-[1.6rem] bg-gradient-to-br from-cyan/60 via-line-2 to-violet/60 p-px">
             <div className="overflow-hidden rounded-[1.55rem] bg-surface">
               <img
-                src="/portrait.png"
+                src={import.meta.env.BASE_URL + "portrait.png"}
                 alt={profile.name}
                 className="aspect-[4/5] w-full object-cover"
               />

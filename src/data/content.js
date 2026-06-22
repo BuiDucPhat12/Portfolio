@@ -49,12 +49,12 @@ export const projects = [
       { label: "GitHub", href: "https://github.com/BuiDucPhat12/supplypulse" },
       { label: "dbt docs", href: "https://buiducphat12.github.io/supplypulse/" },
     ],
-    cover: "/projects/overview.png",
+    cover: import.meta.env.BASE_URL + "projects/overview.png",
     gallery: [
-      { src: "/projects/demo.gif", caption: "Cockpit walkthrough — shortage overview to simulation" },
-      { src: "/projects/simulation.png", caption: "120-day daily inventory projection per material/plant" },
-      { src: "/projects/vendors.png", caption: "Vendor on-time-delivery vs transit time" },
-      { src: "/projects/architecture.png", caption: "Architecture — SAP source → Postgres → dbt → cockpit" },
+      { src: import.meta.env.BASE_URL + "projects/demo.gif", caption: "Cockpit walkthrough — shortage overview to simulation" },
+      { src: import.meta.env.BASE_URL + "projects/simulation.png", caption: "120-day daily inventory projection per material/plant" },
+      { src: import.meta.env.BASE_URL + "projects/vendors.png", caption: "Vendor on-time-delivery vs transit time" },
+      { src: import.meta.env.BASE_URL + "projects/architecture.png", caption: "Architecture — SAP source → Postgres → dbt → cockpit" },
     ],
   },
   {
@@ -80,11 +80,11 @@ export const projects = [
     links: [
       { label: "GitHub", href: "https://github.com/BuiDucPhat12/notebooklm-mini-rag" },
     ],
-    cover: "/projects/nlm-qa.png",
+    cover: import.meta.env.BASE_URL + "projects/nlm-qa.png",
     gallery: [
-      { src: "/projects/nlm-qa.png", caption: "Hỏi-đáp có trích dẫn nguồn (S1/S2 · file · trang)" },
-      { src: "/projects/nlm-home.png", caption: "Giao diện Streamlit — quản lý tài liệu + chọn phạm vi" },
-      { src: "/projects/nlm-arch.svg", caption: "Kiến trúc RAG: ingest → Qdrant → answer + citations" },
+      { src: import.meta.env.BASE_URL + "projects/nlm-qa.png", caption: "Hỏi-đáp có trích dẫn nguồn (S1/S2 · file · trang)" },
+      { src: import.meta.env.BASE_URL + "projects/nlm-home.png", caption: "Giao diện Streamlit — quản lý tài liệu + chọn phạm vi" },
+      { src: import.meta.env.BASE_URL + "projects/nlm-arch.svg", caption: "Kiến trúc RAG: ingest → Qdrant → answer + citations" },
     ],
   },
   {
@@ -110,11 +110,11 @@ export const projects = [
     links: [
       { label: "GitHub", href: "https://github.com/BuiDucPhat12/agentic-rag-legal-vn" },
     ],
-    cover: "/projects/arag-ui.png",
+    cover: import.meta.env.BASE_URL + "projects/arag-ui.png",
     gallery: [
-      { src: "/projects/arag-ui.png", caption: "Agent tự chọn chiến lược (graph) + trả lời có dẫn nguồn" },
-      { src: "/projects/arag-arch.svg", caption: "Kiến trúc: ingest → Chroma/BM25/Graph → 5 chiến lược" },
-      { src: "/projects/arag-home.png", caption: "Gradio UI — chọn chiến lược Agent/dense/bm25/hybrid/graph" },
+      { src: import.meta.env.BASE_URL + "projects/arag-ui.png", caption: "Agent tự chọn chiến lược (graph) + trả lời có dẫn nguồn" },
+      { src: import.meta.env.BASE_URL + "projects/arag-arch.svg", caption: "Kiến trúc: ingest → Chroma/BM25/Graph → 5 chiến lược" },
+      { src: import.meta.env.BASE_URL + "projects/arag-home.png", caption: "Gradio UI — chọn chiến lược Agent/dense/bm25/hybrid/graph" },
     ],
   },
   {
@@ -217,9 +217,16 @@ export const education = {
 };
 
 export const certifications = [
-  "SQL (Intermediate) — HackerRank",
-  "SQL · Power BI · Python · Machine Learning — DataCamp",
-  "AIO-2025 — AI Vietnam",
+  { label: "SQL (Intermediate) — HackerRank" },
+  { label: "SQL · Power BI · Python · Machine Learning — DataCamp" },
+  {
+    label: "AIO-2025 — AI Vietnam",
+    items: [
+      { label: "Data Analysis & Data Science", href: "https://lms.aivietnam.edu.vn/verification/accomplishments/98371793" },
+      { label: "Machine Learning & Deep Learning", href: "https://lms.aivietnam.edu.vn/verification/accomplishments/33648830" },
+      { label: "Computer Vision & NLP", href: "https://lms.aivietnam.edu.vn/verification/accomplishments/56310450" },
+    ],
+  },
 ];
 
 export const nav = [
